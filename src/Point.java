@@ -11,7 +11,6 @@ public class Point implements Comparable<Point>{
         return "Point " + label + " is at x = " + x + ", y = " + y;
     }
 
-
     public int getX() {
         return x;
     }
