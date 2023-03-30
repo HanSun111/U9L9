@@ -1,4 +1,4 @@
-public class Point {
+public class Point implements Comparable{
     private String label;
     private int x;
     private int y;
@@ -29,5 +29,16 @@ public class Point {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if(o instanceof Point){
+            if(((Point) o).getX() >= getX()){
+                return getX();
+            }
+            return ((Point) o).getX();
+        }
+        return -1111111111;
     }
 }
