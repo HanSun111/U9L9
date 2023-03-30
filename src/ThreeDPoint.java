@@ -17,4 +17,12 @@ public class ThreeDPoint extends Point{
     public boolean equals(ThreeDPoint obj) {
         return super.equals(obj) && obj.getZ() == getZ();
     }
+
+
+    public int compareTo(ThreeDPoint p) {
+        if(p.getZ() >= getZ()){
+            return getZ();
+        }
+        return p.getZ();
+    }
 }
